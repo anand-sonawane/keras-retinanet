@@ -140,14 +140,14 @@ def create_generators(args):
     elif args.dataset_type == 'pascal':
         train_generator = PascalVocGenerator(
             args.pascal_path,
-            'trainval',
+            'train',
             transform_generator=transform_generator,
             batch_size=args.batch_size
         )
 
         validation_generator = PascalVocGenerator(
             args.pascal_path,
-            'test',
+            'val',
             batch_size=args.batch_size
         )
     elif args.dataset_type == 'csv':
